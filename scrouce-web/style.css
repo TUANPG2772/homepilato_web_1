@@ -206,6 +206,17 @@ h3 { font-size: 1.42rem; }
   box-shadow: var(--shadow);
 }
 
+
+.btn.disabled {
+  opacity: .6;
+  pointer-events: none;
+  cursor: not-allowed;
+  background: #f7f2e2;
+  border-color: #eadfbe;
+  color: #8f8571;
+  box-shadow: none;
+}
+
 .hero-card,
 .feature-card,
 .form-card,
