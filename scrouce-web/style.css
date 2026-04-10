@@ -206,6 +206,17 @@ h3 { font-size: 1.42rem; }
   box-shadow: var(--shadow);
 }
 
+
+.btn.disabled {
+  opacity: .6;
+  pointer-events: none;
+  cursor: not-allowed;
+  background: #f7f2e2;
+  border-color: #eadfbe;
+  color: #8f8571;
+  box-shadow: none;
+}
+
 .hero-card,
 .feature-card,
 .form-card,
@@ -273,12 +284,51 @@ h3 { font-size: 1.42rem; }
 }
 .section-head p { color: var(--muted); margin: 0; }
 
+
+.section-tight {
+  padding-top: 18px;
+}
+
+.section-head.align-left {
+  text-align: left;
+  margin: 0 0 24px;
+  max-width: none;
+}
+
+.mini-covers {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.mini-cover-card {
+  background: rgba(255,255,255,.86);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  box-shadow: 0 8px 20px rgba(152,103,11,.08);
+}
+
+.mini-cover-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.mini-cover-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: .86rem;
+  margin: 10px 0 2px;
+  line-height: 1.35;
+}
+
 .book-grid,
 .grid-3,
 .review-grid,
 .contact-grid {
   display: grid;
-  gap: 26px;
+  gap: 22px;
 }
 .book-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -350,7 +400,7 @@ h3 { font-size: 1.42rem; }
 }
 .product-row {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 300px 1fr;
   gap: 26px;
   align-items: center;
 }
@@ -515,6 +565,7 @@ label {
   .form-grid {
     grid-template-columns: 1fr;
   }
+  .mini-covers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .nav-inner { padding: 16px 0; align-items: flex-start; }
   .navbar { position: static; }
   .nav-inner, .nav-links { flex-direction: column; }
